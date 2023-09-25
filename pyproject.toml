@@ -1,0 +1,48 @@
+
+# https://setuptools.pypa.io/en/latest/userguide/
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-make-bp"
+description = "Python Make boilerplate"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = "3.11"
+authors = [
+    {name = "lexxx-c", email = "me@me.com"},
+]
+maintainers = [
+    {name = "lexxx-c"},
+]
+# keywords = []
+# https://pypi.org/classifiers/
+classifiers = [
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent", 
+    "Programming Language :: Python :: 3.11", 
+    "Topic :: Education :: Testing", 
+]
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+
+[project.urls]
+"GitHub" = "https://github.com/lexxx-c/"
+
+
+# https://setuptools-git-versioning.readthedocs.io/
+[tool.setuptools-git-versioning]
+enabled = true
+
+
+# https://github.com/jazzband/pip-tools#requirements-from-pyprojecttoml
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.in"]}
+optional-dependencies = {file = "requirements.txt"}
+
+
+

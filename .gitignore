@@ -1,0 +1,11 @@
+### python local
+.venv/
+__pycache__/
+
+### packaging
+eggs/
+*.egg*
+
+
+### local dev
+*.log
